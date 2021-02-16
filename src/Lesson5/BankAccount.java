@@ -2,7 +2,7 @@ package Lesson5;
 
 public class BankAccount {
     String name = "Petr";
-    double balance=100;
+    double balance = 100;
 
     public void addBalance(double sum) {
         System.out.println("Balance before refilling is " + balance);
@@ -19,7 +19,7 @@ public class BankAccount {
     }
 }
 
-class BankAccountTest{
+class BankAccountTest {
     public static void main(String[] args) {
         BankAccount MyAccount = new BankAccount();
         MyAccount.addBalance(30.5);
