@@ -12,6 +12,13 @@ public class Student {
 }
 
 class StudentTest {
+
+    public double countAverageRatings(Student st) {
+        double averageRating = (st.mathAverageRating + st.economicAverageRating + st.foreignLanguageAverageRating) / 3;
+        System.out.println(st.name + "'s" + " the average grade is " + averageRating);
+        return averageRating;
+    }
+
     public static void main(String[] args) {
         Student st1 = new Student();
         st1.number = 1;
@@ -21,6 +28,7 @@ class StudentTest {
         st1.mathAverageRating = 9.4;
         st1.economicAverageRating = 6.9;
         st1.foreignLanguageAverageRating = 8.5;
+
 
         Student st2 = new Student();
         st2.number = 2;
@@ -40,9 +48,14 @@ class StudentTest {
         st3.economicAverageRating = 9.9;
         st3.foreignLanguageAverageRating = 5.5;
 
-        System.out.println("The average grade for " + st1.name + " is " + (st1.mathAverageRating + st1.economicAverageRating + st1.foreignLanguageAverageRating) / 3);
-        System.out.println("The average grade for " + st2.name + " is " + (st2.mathAverageRating + st2.economicAverageRating + st2.foreignLanguageAverageRating) / 3);
-        System.out.println("The average grade for " + st3.name + " is " + (st3.mathAverageRating + st3.economicAverageRating + st3.foreignLanguageAverageRating) / 3);
+        StudentTest sTest = new StudentTest();
+        sTest.countAverageRatings(st1);
+        sTest.countAverageRatings(st2);
+        sTest.countAverageRatings(st3);
+
+//        System.out.println("The average grade for " + st1.name + " is " + (st1.mathAverageRating + st1.economicAverageRating + st1.foreignLanguageAverageRating) / 3);
+//        System.out.println("The average grade for " + st2.name + " is " + (st2.mathAverageRating + st2.economicAverageRating + st2.foreignLanguageAverageRating) / 3);
+//        System.out.println("The average grade for " + st3.name + " is " + (st3.mathAverageRating + st3.economicAverageRating + st3.foreignLanguageAverageRating) / 3);
 
     }
 }
