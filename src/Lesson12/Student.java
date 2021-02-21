@@ -14,28 +14,28 @@ public class Student {
     }
 }
 
-class  StudentTest{
+class StudentTest {
 
-    public static void equals (Student st1, Student st2){
-        if (st1.name.equals(st2.name) && st1.grade== st2.grade && st1.course.equals(st2.course)){
+    public static void equals(Student st1, Student st2) {
+        if (st1.name.equals(st2.name) && st1.grade == st2.grade && st1.course.equals(st2.course)) {
             System.out.println("The students are equaled.");
         } else {
             System.out.println("The students are not equaled.");
         }
     }
 
-    public static void equalsNestedIf(Student st1, Student st2){
-        if (st1.name.equals(st2.name)){
-            if (st1.grade==st2.grade){
-                if (st1.course.equals(st2.course)){
+    public static void equalsNestedIf(Student st1, Student st2) {
+        if (st1.name.equals(st2.name)) {
+            if (st1.grade == st2.grade) {
+                if (st1.course.equals(st2.course)) {
                     System.out.println("The students are equaled.");
                 } else {
                     System.out.println("They are not in the same course.");
                 }
-            }else {
+            } else {
                 System.out.println("Their grade is not equal.");
             }
-        }else {
+        } else {
             System.out.println("Their name is not equal.");
         }
     }
