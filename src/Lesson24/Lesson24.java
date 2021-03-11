@@ -3,35 +3,97 @@ package Lesson24;
 public class Lesson24 {
 
     public static void main(String[] args) {
-        Mechenosec m = new Mechenosec("Mec");
-        System.out.println(m.name);
-        m.sleep();
-        m.eat();
-        m.swim();
+//        Mechenosec m = new Mechenosec("Mec");
+//        System.out.println(m.name);
+//        m.sleep();
+//        m.eat();
+//        m.swim();
+//
+//        System.out.println();
+//
+//        Speakable sp = new Pingvin("Pin");
+//        sp.speak();
+//
+//        System.out.println();
+//
+//        Animal an = new Lev("Lev");
+////        Lev le= new Lev("A");
+////        le.speak();
+////        le.run();
+//        System.out.println(an.name);
+//        an.eat();
+//        an.sleep();
+//
+//        System.out.println();
+//
+//        Mammal mam = new Lev("LevMammal");
+//        System.out.println(mam.name);
+//        mam.eat();
+//        mam.sleep();
+//        mam.speak();
+//        mam.run();
 
-        System.out.println();
 
-        Speakable sp = new Pingvin("Pin");
-        sp.speak();
+//        Lesson25
 
-        System.out.println();
+        Animal an1 = new Mechenosec("Mech");
+        Animal an2 = new Pingvin("Pin");
+        Animal an3 = new Lev("Lev");
 
-        Animal an = new Lev("Lev");
-//        Lev le= new Lev("A");
-//        le.speak();
-//        le.run();
-        System.out.println(an.name);
-        an.eat();
-        an.sleep();
+        Fish f = new Mechenosec("MechFish");
 
-        System.out.println();
+        Bird b1 = new Pingvin("PinBird");
 
-        Mammal mam = new Lev("LevMammal");
-        System.out.println(mam.name);
-        mam.eat();
-        mam.sleep();
-        mam.speak();
-        mam.run();
+        Mammal m1 = new Lev("LevMammal");
+
+        Mechenosec mech = new Mechenosec("MechMech");
+        Pingvin pin = new Pingvin("PinPin");
+        Lev lev = new Lev("LevLev");
+
+        Speakable sp1 = new Pingvin("PinSpeak");
+        Speakable sp2 = new Lev("LevSpeak");
+
+        Speakable[] array1 = {sp1, sp2, pin, lev, b1, m1};
+        Animal[] array2 = {an1, an2, an3, f, b1, m1, mech, pin, lev};
+
+        for (Animal a : array2) {
+            if ((a instanceof Mechenosec)) {
+                System.out.println(a.name);
+                a.eat();
+                a.sleep();
+                ((Mechenosec) a).swim();
+            } else if (a instanceof Pingvin) {
+                System.out.println(a.name);
+                a.eat();
+                a.sleep();
+                ((Pingvin) a).fly();
+                ((Pingvin) a).speak();
+            } else if (a instanceof Lev) {
+                System.out.println(a.name);
+                a.eat();
+                a.sleep();
+                ((Lev) a).run();
+                ((Lev) a).speak();
+            }
+            System.out.println("----------------------------------");
+        }
+
+        for (Speakable s : array1) {
+            if (s instanceof Pingvin) {
+                System.out.println(((Pingvin) s).name);
+                ((Pingvin) s).eat();
+                ((Pingvin) s).sleep();
+                s.speak();
+                ((Pingvin) s).fly();
+            } else if (s instanceof Lev) {
+                System.out.println(((Lev) s).name);
+                ((Lev) s).eat();
+                ((Lev) s).sleep();
+                s.speak();
+                ((Lev) s).run();
+            }
+
+        }
     }
 }
 
